@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de gestion des commandes internes GEH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .header-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .input-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .input-container input {
+            padding: 8px;
+            font-size: 16px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-container button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .input-container button:hover {
+            background-color: #0056b3;
+        }
+        .task-list {
+            margin-bottom: 20px;
+        }
+        .task {
+            padding: 12px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar-fill {
+            height: 30px;
+            width: 75%;
+            background-color: #28a745;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: bold;
+            transition: width 0.4s;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .total-refund {
+            font-weight: bold;
+            color: #dc3545;
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .input-container {
+                text-align: left;
+            }
+            .header-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-title">Système de gestion des commandes internes GEH</div>
+        <div class="input-container">
+            <input type="text" placeholder="Entrez le code">
+            <button>Rechercher</button>
+        </div>
+        <section class="task-list">
+            <div class="task">
+                <p>Tâche 1 - Montant soumis: 20000, Profit: 30%, Statut: Terminé</p>
+            </div>
+            <div class="task">
+                <p>Tâche 2 - Montant soumis: 150000, Profit: 50%, Statut: Terminé</p>
+            </div>
+            <div class="task">
+                <p>Tâche 3 - Montant soumis: 680000, Profit: 60%, Statut: Terminé</p>
+            </div>
+            <div class="task">
+                <p>Commande de remboursement - Montant soumis: Non soumis, Profit: Inconnu, Statut: Non terminé</p>
+            </div>
+        </section>
+        <section>
+            <p>Progrès de la tâche:</p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill">75%</div>
+            </div>
+        </section>
+        <div class="footer">
+            <p class="total-refund">Montant total du remboursement: Ordre de remboursement non complété, non éligible au remboursement</p>
+        </div>
+    </div>
+</body>
+</html>
